@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pract1
+{
+    class Complex
+    {
+        private int real;
+        private int imagin;
+
+        public Complex() { }
+
+        public Complex(int u, int p)
+        {
+            real = u;
+            imagin = p;
+        }
+        public void sum(Complex x, Complex y)
+        {
+            real = x.real + y.real;
+            imagin = x.imagin + y.imagin;
+        }
+        public void display()
+        {
+            Console.WriteLine($"{real} +i {imagin}");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Complex c1 = new Complex(2, 3);
+            Complex c2 = new Complex(10, 20);
+            Complex c3 = new Complex();
+
+            c3.sum(c1,c2);
+            c3.display();
+
+            Console.ReadKey();
+        }
+    }
+}
